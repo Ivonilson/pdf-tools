@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/api/compress-pdf/compress-pdf.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/api/compress-pdf/compress-pdf.js", "src/app/(main)/tools/compress/page.js"],
   "exclude": ["node_modules"]
 }
