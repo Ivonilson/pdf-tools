@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { FiMenu, FiX, FiUpload, FiUser, FiSearch } from 'react-icons/fi'
 import LoginButton from './LoginButton'
+import UserProfile from './UserProfile'
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -12,7 +13,7 @@ export default function Navbar() {
 
   // Simulação das ferramentas disponíveis
   const tools = [
-    { name: 'PDF para Word', slug: 'pdf-to-word' },
+    { name: 'Comprimir PDF', slug: 'tools/compress' },
     { name: 'PDF para Excel', slug: 'pdf-to-excel' },
     { name: 'PDF para PPT', slug: 'pdf-to-ppt' },
     { name: 'Comprimir PDF', slug: 'compress-pdf' },
@@ -76,7 +77,7 @@ export default function Navbar() {
 
           {/* Botões de ação */}
           <div className="hidden md:flex items-center space-x-4">
-            <LoginButton/>
+            <LoginButton /><UserProfile />
           </div>
 
           {/* Menu mobile button */}
