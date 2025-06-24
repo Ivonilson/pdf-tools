@@ -2,6 +2,7 @@
 import { useState, useRef } from "react";
 import { PDFDocument, PDFName } from "pdf-lib";
 import {compressFile} from "compactor";
+import Link from "next/link";
 
 export default function PdfCompressor() {
   const [file, setFile] = useState<File | null>(null);
@@ -94,7 +95,7 @@ export default function PdfCompressor() {
   };
 
   return (
-    <div className="max-w-md mx-auto p-4 bg-white rounded-lg shadow-md">
+    <div className="max-w-md mx-auto p-4 mt-20 bg-white rounded-lg shadow-md">
       <h1 className="text-2xl font-bold text-gray-800 mb-6">Otimizador de PDF</h1>
 
       {/* Seletor de Arquivo */}
@@ -140,6 +141,11 @@ export default function PdfCompressor() {
           </>
         ) : "Otimizar PDF"}
       </button>
+      
+      <Link href="/">
+        <button className="w-full px-4 py-3 bg-amber-600 hover:bg-amber-500 text-white rounded-md mt-2">Voltar</button>
+      </Link>
+     
 
       {/* Resultados */}
       {compressionInfo && (
@@ -176,6 +182,7 @@ export default function PdfCompressor() {
             Baixar PDF Otimizado
           </button>
         </div>
+        
       )}
 
       {/* Elemento invisível para download */}
