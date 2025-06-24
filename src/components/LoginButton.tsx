@@ -19,7 +19,7 @@ export default function LoginButton() {
       onClick={handleAuth}
       className="bg-white text-gray px-4 py-2 rounded flex justify-center hover:bg-gray-200 cursor-pointer"
     >
-      <FiUser className="mr-2" /> {auth.currentUser ? "Trocar de conta" : "Entrar com Google"}
+      <FiUser className="mr-2" /> {auth.currentUser ? "Bem-vindo(a)" : "Entrar com Google"}
     </button>
   );
 }

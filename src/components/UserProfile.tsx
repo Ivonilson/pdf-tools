@@ -17,18 +17,15 @@ export default function UserProfile() {
   if (!user) return null;
 
   return (
-    <div className="mt-4 p-4 border rounded-lg">
-      <h3 className="font-bold">Dados do usuário:</h3>
+    <div className="mt-0 p-0 rounded-lg">
       {user.photoURL && (
         <img 
           src={user.photoURL} 
           alt="Foto do usuário"
-          className="w-16 h-16 rounded-full my-2"
+          className="w-12 h-12 rounded-full my-2"
+          title={user.displayName}
         />
       )}
-      <p><strong>Nome:</strong> {user.displayName || "Não informado"}</p>
-      <p><strong>Email:</strong> {user.email || "Não informado"}</p>
-      <p><strong>ID:</strong> {user.uid}</p>
     </div>
   );
 }
